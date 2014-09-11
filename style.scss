@@ -1,0 +1,50 @@
+//variables
+$purple: #660066;
+$border: 1px solid #00CC00;
+$margin: 5px;
+$paratext: #993399;
+$pad: 5px;
+$shadow: 10px 10px 5px #888888;
+div {
+    border: $border;
+	width: 400px;
+	padding: $pad;
+	box-shadow: $shadow;
+}
+
+table {
+	border: $border;
+	color: $paratext;
+	padding: $pad;
+}
+
+h1, h2 {
+	color: $purple;
+}
+
+//nesting
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+
+//mixins
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+#mix { @include border-radius(10px); }
