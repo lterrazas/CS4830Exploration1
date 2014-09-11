@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset=utf-8"/>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>
+CS 4830
+</title>
+<h1>Exploartion Assignment</h1>
+</head>
+<body>
+<h2>Sass</h2>
+<div>
+Variables allow you to reuse any CSS value. For example if you have a large site and want
+to always make sure you have the same shade of blue, create a variable with the color number
+and lable it something meangful that you can use throughout your style sheet.
+</div>
+<br>
+<div>
+Nesting helps your css look like there is some kind of hierachy just like your html pages.
+Though you can and most likely will run into problems if you overly nest things.
+<br>
+<table>
+	<tr>
+		<td>yes</td>
+		<td>no</td>
+		<td>yes</td>
+	</tr>
+	<tr>
+		<td>no</td>
+		<td>yes</td>
+		<td>no</td>
+	</tr>
+</table>
+</div>
+<br>
+<div>
+<ul>
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+</ul>
+<br>
+<ul>
+	<ol>1</ol>
+	<ol>2</ol>
+	<ol>3</ol>
+</ul>
+</div>
+<br>
+<div id='mix'>
+Vendor prefixes can be very annoying because of how much code there is for it and having to
+type it over and over again. Mixins are a great way to use the same block of code multiple times.<br>
+Example:
+
+<code>
+@mixin border-radius($radius) {<br>
+  -webkit-border-radius: $radius;<br>
+     -moz-border-radius: $radius;<br>
+      -ms-border-radius: $radius;<br>
+          border-radius: $radius;<br>
+}
+
+#mix { @include border-radius(10px); }
+</code>
+</div>
+</body>
+</html> 
